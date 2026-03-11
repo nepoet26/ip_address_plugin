@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ip_address_plugin/ip_address_plugin.dart';  // Import plugin của bạn
+import 'package:ip_address_plugin/ip_address_plugin.dart';
 
 void main() {
   runApp(const MyApp());

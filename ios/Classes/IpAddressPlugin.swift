@@ -15,10 +15,8 @@ public class IpAddressPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
     case "getIPv4":
-      // Mặc định ưu tiên Wi‑Fi
       result(getIPAddress(forFamily: AF_INET, networkType: "wifi"))
     case "getIPv6":
-      // Mặc định ưu tiên Wi‑Fi
       result(getIPAddress(forFamily: AF_INET6, networkType: "wifi"))
     case "getIPv4ForNetwork":
       let type = (call.arguments as? [String: Any])?["type"] as? String
@@ -62,9 +60,9 @@ public class IpAddressPlugin: NSObject, FlutterPlugin {
         let matchesNetwork: Bool = {
           switch expected {
           case "wifi":
-            return interfaceName.hasPrefix("en") // en0 thường là Wi‑Fi
+            return interfaceName.hasPrefix("en")
           case "mobile":
-            return interfaceName.hasPrefix("pdp_ip") // pdp_ip0 thường là Cellular
+            return interfaceName.hasPrefix("pdp_ip")
           default:
             return false
           }

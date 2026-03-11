@@ -20,7 +20,7 @@ class IpAddressPlugin: FlutterPlugin, MethodCallHandler {
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         appContext = flutterPluginBinding.applicationContext
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "ip_address_plugin")  // ← đổi channel
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "ip_address_plugin")
         channel.setMethodCallHandler(this)
     }
 
@@ -116,7 +116,7 @@ class IpAddressPlugin: FlutterPlugin, MethodCallHandler {
 
                     if (useIPv4) {
                         if (addr is Inet4Address && !ip.startsWith("127.") && !ip.startsWith("169.254.")) {
-                            return ip  // Trả về IPv4 đầu tiên hợp lệ (thường là WiFi/local)
+                            return ip
                         }
                     } else {
                         if (addr is Inet6Address &&
