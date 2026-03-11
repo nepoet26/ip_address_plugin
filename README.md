@@ -49,7 +49,11 @@ Plugin Flutter giúp lấy địa chỉ IP của thiết bị trên Android và 
     - Không có cache, hoặc  
     - chủ động yêu cầu làm mới (refresh) từ phía Dart.
 
+## Screenshots
 
+| Wi‑Fi | Mobile Data | No internet connection |
+|---|---|---|
+| ![Wi‑Fi](Screenshots/Screenshot_wifi.jpg) | ![Mobile Data](Screenshots/Screenshot_mobile-data.jpg) | ![No internet connection](Screenshots/Screenshot_no-internet-connection.jpg) |
 
 ## Hướng dẫn chạy
 
