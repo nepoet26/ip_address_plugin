@@ -47,7 +47,7 @@ Plugin Flutter giúp lấy địa chỉ IP của thiết bị trên Android và 
   - Lưu IP trả về kèm theo loại mạng.  
   - Chỉ gọi lại native khi:  
     - Không có cache, hoặc  
-    - Bạn chủ động yêu cầu làm mới (refresh) từ phía Dart.
+    - chủ động yêu cầu làm mới (refresh) từ phía Dart.
 
 
 
